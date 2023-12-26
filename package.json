@@ -14,7 +14,7 @@
     "e2e": "bddgen -c e2e/playwright.config.js && playwright test -c e2e/playwright.config.js",
     "e2e:watch": "npm-run-all -p \"ng serve -- -c production\" playwright:watch",
     "playwright": "bddgen -c e2e/playwright.config.js && playwright test -c e2e/playwright.config.override.js",
-    "playwright:watch": "wait-on http://localhost:4200/ && watch \"npm run playwright\" e2e/src --wait=1",
+    "playwright:watch": "wait-on http://localhost:4200/ && watch \"npm run playwright\" e2e/steps e2e/features --wait=1",
     "playwright:debug": "cross-env-shell PWDEBUG=1 npm run playwright",
     "build": "ng build",
     "ng": "ng"
